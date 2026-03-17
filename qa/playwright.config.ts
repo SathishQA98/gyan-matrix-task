@@ -11,6 +11,13 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
+if(!process.env.NODE_ENV){ // what if no value
+  require('dotenv').config({path: `${__dirname}//.env`})
+}else{ // what if value set up already
+  require('dotenv').config({path: `${__dirname}//.env.${process.env.NODE_ENV}`}) 
+} 
+
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
