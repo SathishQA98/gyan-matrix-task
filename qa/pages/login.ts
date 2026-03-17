@@ -24,8 +24,8 @@ export default class Login{
     }
 
     async LoginToApplication(){
-        await this.setpageExtension.SetTextBoxValueByID(this.usernameTextbox, "sathish");
-        await this.setpageExtension.SetTextBoxValueByID(this.passwordTextbox, "Test@123");
+        await this.setpageExtension.SetTextBoxValueByID(this.usernameTextbox, process.env.USER_NAME);
+        await this.setpageExtension.SetTextBoxValueByID(this.passwordTextbox, process.env.USER_PASSWORD);
         await this._page.waitForTimeout(3000);
         await this.clickPageExtensions.ClickButtonByName(this.loginButton);
     }
