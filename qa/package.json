@@ -2,13 +2,19 @@
   "name": "qa",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test --headed --project=chromium"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^10.3.0",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0"
+  },
+  "dependencies": {
+    "random-name": "^0.1.2"
   }
 }

@@ -45,4 +45,17 @@ export class ClickPageExtensions {
 
     await this.Click(locator, timeout);
   }
+
+  async ClickLinkByName(linkName: string | Locator, timeout = 60000) {
+
+    let locator: Locator;
+
+    if (typeof linkName !== "string") {
+      locator = linkName;
+    } 
+    else {
+      locator = this.page.getByRole('link', { name: linkName });
+    }
+    await this.Click(locator, timeout);
+  }
 }
