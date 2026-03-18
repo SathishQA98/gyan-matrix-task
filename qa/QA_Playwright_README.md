@@ -147,6 +147,10 @@ npm i random-name => faker to genarate name to create project in web app
 
 Execute tests using:
 
+make sure you are under qa folder
+so do cd qa the run test using below CLI
+[Note as per development one should have docker installed and pull the image and make sure localhost//80:80 is working]
+
 ``` bash
 npm run test
 ```
