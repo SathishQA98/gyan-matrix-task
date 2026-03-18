@@ -139,7 +139,8 @@ git clone <repository-url>
 Initialize Playwright and install dependencies:
 
 ``` bash
-npm init playwright@latest
+npm init playwright@latest => scaffold
+npm i random-name => faker to genarate name to create project in web app
 ```
 
 ## Step 4 -- Run the Tests
