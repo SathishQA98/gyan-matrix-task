@@ -25,6 +25,5 @@ export default class Logout{
     async LogoutFromApplication(){
         await this.clickPageExtensions.ClickButtonByLocator(this.userprofileDropdown);
         await this.clickPageExtensions.ClickButtonByName(this.logoutButton);
-        await this._page.waitForTimeout(5000);
     }
 }

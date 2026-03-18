@@ -8,14 +8,13 @@ export default class Login{
     loginButton: Locator;
     setpageExtension: SetPageExtenstions;
     clickPageExtensions: ClickPageExtensions;
-    _page: any
+    _page: any;
     
     constructor(page: Page){
         this._page = page;
         //objects
         this.setpageExtension = new SetPageExtenstions(page);
         this.clickPageExtensions = new ClickPageExtensions(page);
-
 
         //page locators
         this.usernameTextbox = page.locator("#username");
@@ -26,7 +25,7 @@ export default class Login{
     async LoginToApplication(){
         await this.setpageExtension.SetTextBoxValueByID(this.usernameTextbox, process.env.USER_NAME);
         await this.setpageExtension.SetTextBoxValueByID(this.passwordTextbox, process.env.USER_PASSWORD);
-        await this._page.waitForTimeout(3000);
+        await this._page.waitForTimeout(2000);
         await this.clickPageExtensions.ClickButtonByName(this.loginButton);
     }
 }

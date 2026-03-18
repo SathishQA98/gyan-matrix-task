@@ -14,7 +14,6 @@ test.describe("Workflow Testing", ()=>{
     login = new Login(userPage);
     logout = new Logout(userPage);
     project = new Project(userPage);
-    await userPage.waitForTimeout(10000);
   })
 
   test('Create Project', async () => {
